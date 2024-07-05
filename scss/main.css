@@ -105,22 +105,27 @@
   border: 1px solid #fff;
 }
 
+.destination-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 100px;
+}
+
 .site-main-destination {
   width: 100%;
-  min-height: 100vh;
-  background-image: url(../images/moon-bg.jpg);
+  height: 100vh;
+  background-image: url(../../images/moon-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.destination-section {
-  padding-top: 210px;
-}
-
 .destination {
-  max-width: 1096px;
-  margin: 0 auto;
+  padding-bottom: 118px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -178,10 +183,11 @@
   justify-content: space-between;
   margin-bottom: 37px;
 }
-.destination__list--link {
+
+.destination__item > a {
   font-size: 16px;
   font-weight: 400;
-  line-height: 19px;
+  line-height: 16px;
   color: rgb(208, 214, 249);
   margin-bottom: 0px;
   font-family: "Barlow Condensed";
@@ -190,30 +196,18 @@
   padding-bottom: 12px;
   transition: 0.2s all linear;
 }
-.destination__list--link:hover {
+.destination__item > a:hover {
   color: #fff;
   border-bottom: 3px solid #fff;
 }
 
 .travel__contant-wrapper {
   max-width: 444px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
   padding-top: 28px;
   border-top: 1px solid #383B4B;
 }
 
-.travel__title-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.travel__title-wrapper > span {
+.travel__contant-wrapper > strong {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
@@ -223,123 +217,29 @@
   font-family: "Barlow Condensed";
 }
 
-.travel__title-wrapper > p {
+.travel__contant-wrapper > strong > span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgb(208, 214, 249);
+  margin-bottom: 0px;
+  letter-spacing: 2.36px;
+  font-family: "Barlow Condensed";
+  margin-left: 148px;
+  text-transform: uppercase;
+}
+
+.travel__contant-wrapper > p {
   font-size: 28px;
   font-weight: 400;
   line-height: 32px;
   color: #fff;
   margin-bottom: 0px;
-  display: inline-block;
   letter-spacing: 2.36px;
   font-family: "Bellefair";
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 980px) {
-  .destination-section {
-    padding: 0px;
-  }
-  .destination {
-    max-width: 573px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .destination__img {
-    width: 300px;
-    height: 300px;
-  }
-  .top-destination-contant {
-    padding-top: 190px;
-    margin-bottom: 60px;
-    margin-left: 38px;
-  }
-  .destination__text-wrapper {
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .destination__list {
-    margin: 0 auto;
-    margin-top: 53px;
-    margin-bottom: 32px;
-  }
-  .destination__text-wrapper > h2 {
-    font-size: 80px;
-    font-weight: 400;
-    line-height: 91px;
-    color: #fff;
-    margin-bottom: 8px;
-    font-family: "Bellefair";
-  }
-  .destination__text-wrapper > p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    color: rgb(208, 214, 249);
-    margin-bottom: 49px;
-    font-family: "Barlow";
-  }
-  .travel__contant-wrapper {
-    max-width: 573px;
-  }
-  .travel__contant-wrapper > p > span {
-    margin-left: 95px;
-  }
-}
-@media only screen and (max-width: 520px) {
-  .destination-section {
-    padding: 130px 0 50px;
-  }
-  .destination {
-    max-width: 573px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .destination__img {
-    width: 300px;
-    height: 300px;
-  }
-  .top-destination-contant {
-    margin-top: 76px;
-    margin-bottom: 60px;
-    margin-left: 38px;
-  }
-  .destination__text-wrapper {
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .destination__list {
-    margin: 0 auto;
-    margin-top: 53px;
-    margin-bottom: 32px;
-  }
-  .destination__text-wrapper > h2 {
-    font-size: 80px;
-    font-weight: 400;
-    line-height: 91px;
-    color: #fff;
-    margin-bottom: 8px;
-    font-family: "Bellefair";
-  }
-  .destination__text-wrapper > p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    color: rgb(208, 214, 249);
-    margin-bottom: 49px;
-    font-family: "Barlow";
-  }
-  .travel__contant-wrapper {
-    max-width: 573px;
-  }
-  .travel__contant-wrapper > p > span {
-    margin-left: 95px;
-  }
+.travel__contant-wrapper > p > span {
+  margin-left: 79px;
 }/*# sourceMappingURL=main.css.map */

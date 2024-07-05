@@ -1,0 +1,195 @@
+
+// .destination-wrapper{
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     justify-content: flex-end;
+//     padding-top: 100px;
+// }
+.site-main-destination {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/moon-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.destination-section{
+    padding-top: 210px;
+}
+.destination {
+    max-width: 1096px;
+    margin: 0 auto;
+    @include display($direction:row, $items:center, $justify:space-between);
+    gap: 10px;
+}
+.top-destination-contant{
+    @include textStyle($fs:28px, $fw:400, $lh:33px, $clr:$primary-color, $mb:64px);
+    font-family: 'Barlow Condensed';
+    text-transform: uppercase;
+}
+.top-destination-contant > span{
+    @include textStyle($fs:28px, $fw:700, $lh:33px, $clr:#4E5058, $mb:64px);
+    text-transform: lowercase;
+    margin-right: 28px;
+}
+.destination__text-wrapper {
+    max-width: 445px;
+}
+.destination__text-wrapper > h2{
+    @include textStyle($fs:100px, $fw:400, $lh:114px, $clr:$primary-color, $mb:14px);
+    font-family: 'Bellefair';   
+}
+.destination__text-wrapper > p{
+    @include textStyle($fs:18px, $fw:400, $lh:32px, $clr:$secondary-color, $mb:14px);
+    font-family: 'Barlow';
+}
+.destination__list {
+    max-width: 285px;
+    @include display($direction:row, $items:center, $justify:space-between);
+    margin-bottom: 37px;
+    &--link{
+        @include textStyle($fs:16px, $fw:400, $lh:19px, $clr:$secondary-color, $mb:0px);
+        font-family: 'Barlow Condensed';
+        letter-spacing: 2.7px;
+        border: 1px solid transparent;
+        padding-bottom: 12px;
+        transition: .2s all linear;
+        &:hover{
+            color: $primary-color;
+            border-bottom: 3px solid $primary-color;
+
+        }
+    }
+}
+.travel__contant-wrapper {
+    max-width: 444px;
+    @include display($direction:row, $items:center, $justify:space-around);
+    padding-top: 28px;
+    border-top:1px solid #383B4B ;
+}
+.travel__title-wrapper{
+    @include display($direction:column, $items:center, $justify:space-between);
+    gap: 12px;
+}
+.travel__title-wrapper > span{
+    @include textStyle($fs:14px, $fw:400, $lh:16px, $clr:$secondary-color, $mb:12px);
+    letter-spacing: 2.36px;
+    font-family: 'Barlow Condensed';
+}
+.travel__title-wrapper > p{
+    @include textStyle($fs:28px, $fw:400, $lh:32px, $clr:$primary-color, $mb:0px);
+    display: inline-block;
+    letter-spacing: 2.36px;
+    font-family: 'Bellefair';
+    text-transform: uppercase;
+}
+
+
+// tablet start
+
+@media only screen and (max-width:980px){
+    .destination-section{
+        // padding: 130px 0 50px;
+        padding: 0px;
+    }
+    .destination {
+        // padding-bottom: 118px;
+        // padding-top: 100px;
+        max-width: 573px;
+        margin: 0 auto;
+        @include display($direction:column, $items:center, $justify:space-between);
+    }
+    .destination__img{
+        width: 300px;
+        height: 300px;
+    }
+    .top-destination-contant{
+        padding-top: 190px;
+        // margin-top: 76px;
+        margin-bottom: 60px;
+        margin-left: 38px;
+    }
+    .destination__text-wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .destination__list {
+        
+        margin: 0 auto;
+        margin-top: 53px;
+        margin-bottom: 32px;
+
+
+    }
+    
+    .destination__text-wrapper > h2{
+        @include textStyle($fs:80px, $fw:400, $lh:91px, $clr:$primary-color, $mb:8px);
+        font-family: 'Bellefair';   
+    }
+    .destination__text-wrapper > p{
+        @include textStyle($fs:16px, $fw:400, $lh:28px, $clr:$secondary-color, $mb:49px);
+        font-family: 'Barlow';
+    }
+    .travel__contant-wrapper {
+        max-width: 573px;
+        
+    }
+    .travel__contant-wrapper > p > span {
+        margin-left: 95px;
+    }
+}
+
+
+
+// mobile start
+
+@media only screen and (max-width:520px){
+    .destination-section{
+        padding: 130px 0 50px;
+    }
+    .destination {
+        // padding-bottom: 118px;
+        // padding-top: 100px;
+        max-width: 573px;
+        margin: 0 auto;
+        @include display($direction:column, $items:center, $justify:space-between);
+    }
+    .destination__img{
+        width: 300px;
+        height: 300px;
+    }
+    .top-destination-contant{
+        margin-top: 76px;
+        margin-bottom: 60px;
+        margin-left: 38px;
+    }
+    .destination__text-wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .destination__list {
+        
+        margin: 0 auto;
+        margin-top: 53px;
+        margin-bottom: 32px;
+    }
+    .destination__text-wrapper > h2{
+        @include textStyle($fs:80px, $fw:400, $lh:91px, $clr:$primary-color, $mb:8px);
+        font-family: 'Bellefair';   
+    }
+    .destination__text-wrapper > p{
+        @include textStyle($fs:16px, $fw:400, $lh:28px, $clr:$secondary-color, $mb:49px);
+        font-family: 'Barlow';
+    }
+    .travel__contant-wrapper {
+        max-width: 573px;
+        
+    }
+    .travel__contant-wrapper > p > span {
+        margin-left: 95px;
+    }
+}

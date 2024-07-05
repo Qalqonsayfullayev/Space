@@ -1,0 +1,137 @@
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    margin-top: 40px;
+    padding-left: 55px;
+    }
+.header{
+    width: 100%;
+    @include display($direction:row, $items:center, $justify:space-between);
+    &__logo{
+        width: 48px;
+        height: 48px;
+        background-color: $primary-color;
+        border-radius: 50%;
+    }
+    &__nav{
+        &--list{
+            @include display($direction:row, $items:center, $justify:flex-start);
+            gap: 48px;
+            min-width: 830px;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 39px 0;
+            padding-left: 123px;
+            overflow: hidden;
+        }
+        &--link{
+                @include textStyle($fs:16px, $fw:400, $lh:19px, $clr: $primary-color, $mb:0px);
+                letter-spacing: 2.700000047683716px;
+                font-family: 'Barlow Condensed';
+                text-transform: uppercase;
+                font-family: Barlow Condensed;
+                position: relative;
+                overflow: hidden;
+                transition: all .3s ease;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $primary-color;
+                    left: 0;
+                    bottom: -2px;
+                    z-index: -1;
+                    transition: all .3s ease;
+                }
+                &:hover{
+                    color: #000;
+                    &::after{
+                        height: 100%;
+                        border: 1px solid $primary-color;
+                    }
+                }
+        }
+    }
+}
+
+#hero{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero{
+    padding-top: 187px;
+    width: 100%;
+    min-height: 100vh;
+    @include display($direction:row, $items:flex-end, $justify:space-between);
+    padding-bottom:130px;
+    &__info{
+        max-width: 444px;
+        width: 100%;
+        &--subtitle{
+            @include textStyle($fs:28px, $fw:400, $lh:33px, $clr: $primary-color, $mb:24px);
+            font-family: 'Barlow Condensed';
+            text-transform: uppercase;
+        }
+        &--title{
+            @include textStyle($fs:150px, $fw:400, $lh:171px, $clr:$primary-color, $mb:24px);
+            font-family: 'Bellefair';
+            text-transform: uppercase;
+        }
+        &--text{
+            @include textStyle($fs:18px, $fw:400, $lh:24px, $clr:$secondary-color, $mb:0px)
+        }
+    }
+    &__explore{
+        width: 274px;
+        height: 274px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        @include display($direction:row, $items:center, $justify:center);
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        &--link{
+            @include textStyle($fs:32px, $fw:400, $lh:36px, $clr:rgba(11, 13, 23, 1), $mb:0px);
+        }
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            opacity: 0.5;
+            position: absolute;
+            z-index: -1;
+            transition: all .3s linear;
+
+        }
+        &:hover{
+            &::after{
+                opacity: 0.8;
+                transform: scale(1.4);
+                z-index: -1;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    .hero{
+        padding-top: 202px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

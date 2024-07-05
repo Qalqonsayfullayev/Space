@@ -144,43 +144,49 @@
   border: 1px solid #fff;
 }
 
-section {
-  width: 100px;
-}
 
 
 
 .technology {
-  display: flex;
+  padding-top: 202px;
+  padding-bottom: 100px;
+  &__info{
+    display: flex;
+    align-items: center ;
+  }
+  &__main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
 }
 
 .technology__text {
-  padding-top: 137px;
-  display: flex;
-  // gap: 80px;
-  
+  margin-bottom: 26px;
+  @include textStyle($fs:28px, $fw:400, $lh:33px, $clr:$primary-color, $mb:64px);
+  font-family: 'Barlow Condensed';
+  text-transform: uppercase;  
+}
+.technology__span{
+  margin-right: 28px;
 }
 
 .technology__text-wrapper {
   padding-top: 212px;
   display: block;
-  margin-left: 166.5px;
+  // margin-left: 166.5px;
 }
 
 .technology__nambers {
   width: 200px;
-  display: grid;
-  grid-template-columns: auto;
+  display: flex;
+  flex-direction: column;
+  // display: grid;
+  // grid-template-columns: auto;
 }
 
-.technology__namberone {
-  width: 80px;
-  height: 80px;
-  padding: 22px 32px;
-  border-radius: 50%;
-  border: solid 1px white;
-  background-color: white;
-  @include  textStyle($fs:32px, $fw: 400, $lh:36.67px, $clr:#0B0D17, $mb:32px);
+.technology__namber {
 }
 
 .technology__namber {
@@ -191,6 +197,17 @@ section {
   border: solid 1px #D0D6F9;
   background-color: transparent;
   @include  textStyle($fs:32px, $fw: 400, $lh:33.67px, $clr:$primary-color, $mb:32px);
+  transition: all .3s ease;
+  cursor: pointer;
+  &:hover{
+    width: 80px;
+    height: 80px;
+    padding: 22px 32px;
+    border-radius: 50%;
+    border: solid 1px white;
+    background-color: white;
+    @include  textStyle($fs:32px, $fw: 400, $lh:36.67px, $clr:#0B0D17, $mb:32px);
+  }
 }
 
 .technology__text-top-wrapper {
@@ -211,7 +228,6 @@ section {
 
 .technology__text-bottom-wrapper {
   width: 470px;
-  margin-right: 130px;
 }
 
 .technology__text-top {
@@ -220,7 +236,7 @@ section {
   letter-spacing: 4.72px;
 }
 
-h1 {
+.technology__title {
   width: 470px;
   font-family: 'Bellefair';
   @include  textStyle($fs:56px, $fw:400, $lh:64.18px, $clr:white, $mb:17px);
@@ -234,7 +250,5 @@ h1 {
 .technology__img-wrapper {
   width: 515px;
   height: 527px;
-  margin-top: 272px;
   margin-right: 0px;
-  margin-bottom: 101px;
 }

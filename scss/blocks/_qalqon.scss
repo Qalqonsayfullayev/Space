@@ -154,7 +154,9 @@
 .crew__div {
   display: flex;
   gap: 24px;
-  margin-bottom: 154px;
+  @include textStyle($fs:28px, $fw:400, $lh:33px, $clr:$primary-color, $mb:64px);
+  font-family: 'Barlow Condensed';
+  text-transform: uppercase; 
 
 }
 
@@ -173,7 +175,6 @@
 }
 
 .crew__div > p {
-  width: 228px;
   height: 34px;
   left: 54px;
   gap: 0px;

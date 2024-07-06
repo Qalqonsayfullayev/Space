@@ -79,7 +79,6 @@
   padding-top: 188px;
   display: flex;
   align-items: flex-end;
-
 }
 
 .crew__ul {
@@ -96,7 +95,6 @@
   background: $primary-color;
   border-radius: 50%;
   transition: all 0.3s;
-
 
   &:hover {
     opacity: 100%;
@@ -155,7 +153,6 @@
   display: flex;
   gap: 24px;
   margin-bottom: 154px;
-
 }
 
 .crew__div > span {
@@ -184,12 +181,5 @@
   line-height: 33.6px;
   letter-spacing: 4.724999904632568px;
   text-align: left;
-  color: #ffffff;
-
-}
- 
-@media ( max-width: 942px) {
-  .crew__main {
-    min-width: 100%;    
-  }
+  color: #fff;
 }
